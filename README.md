@@ -21,6 +21,10 @@ Creating NET8 Microservices_Clean Architectura and angular 18 - Ecommerce
 8.- Project eCommerce.SharedLibrary
 	Create folder Interface
 	Create interface IGenericInterface
+9.- Global Exception Middleware
+	Create folder Middleware
+	Create file GlobalException.cs
+	
 	
 	
 
