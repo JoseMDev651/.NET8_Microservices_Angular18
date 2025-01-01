@@ -9,6 +9,19 @@ Creating NET8 Microservices_Clean Architectura and angular 18 - Ecommerce
 	EfCore
 	SqlServer
 	Serilog.AspNetCore
+4.- Package Manager Console
+	- dotnet build
+5.- Rebuild Solution
+6.- Project eCommerce.SharedLibrary
+	Create folder Response
+	Add class . response.cs
+7.- Project eCommerce.SharedLibrary
+	Create folder Logs
+	Add class LogException
+8.- Project eCommerce.SharedLibrary
+	Create folder Interface
+	Create interface IGenericInterface
+	
 	
 
 
