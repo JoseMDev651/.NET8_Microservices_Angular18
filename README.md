@@ -27,6 +27,16 @@ Creating NET8 Microservices_Clean Architectura and angular 18 - Ecommerce
 10.- Middleware (Listen to only API Gateway)
 	Middleware folder -> Create class (ListenToOnlyGateway)
 	a) Task InvokeAsync
+11.- Authentication Scheme
+	Create folder DependencyInjection
+	créate class file JWTAuthenticationSchema.cs
+	-Authetication to API
+	Shared Service - Create a class ->SharedServiceContainer ->to majke public
+		Add Generic Database context
+		Configure serilog logging
+		Add JWT authentication Scheme
+		IapplicationBuilder UseSharedPolicies
+
 	
 	
 	
