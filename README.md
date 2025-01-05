@@ -31,11 +31,32 @@ Creating NET8 Microservices_Clean Architectura and angular 18 - Ecommerce
 	Create folder DependencyInjection
 	créate class file JWTAuthenticationSchema.cs
 	-Authetication to API
-	Shared Service - Create a class ->SharedServiceContainer ->to majke public
+	Shared Service - Create a class ->SharedServiceContainer ->to make public
 		Add Generic Database context
 		Configure serilog logging
 		Add JWT authentication Scheme
 		IapplicationBuilder UseSharedPolicies
+
+-------------------------------------------------------
+Creating Product API
+-Create new PSolution (DemoECommerce.ProdctApiSolution)
+-CReate new class Project (Product.ApiSolution)
+-Create new class Project (ProductApi.Domain)
+- Create new Class Project. Infrastructure. (ProductApi.Infrastructure)
+- Create new Wep API Project. Presentation. (ProductAPI.Presentation)
+- Add Project eCommerce.SharedLibrary to Solution
+- Delete weather files and http.
+- Rebuild Solution
+- ProductApi.Presentation
+	Add Nuget Dependencies:
+		For perform migrations. Microsoft.EntityFrameworkCore.Tools
+- ProductApi.Application
+	Add Project references.
+	eCommerce.SharedLibrary
+	Product.Api.Domain
+		
+
+
 
 	
 	

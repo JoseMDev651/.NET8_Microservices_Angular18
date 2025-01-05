@@ -20,7 +20,7 @@ namespace eCommerce.SharedLibrary.DependencyInjection
                 .GetConnectionString("eCommerceConection"), sqlserverOption =>
                 sqlserverOption.EnableRetryOnFailure()));
 
-            // Configure serilog logging
+            // Configure Serilog logging
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Information()
                 .WriteTo.Debug()
