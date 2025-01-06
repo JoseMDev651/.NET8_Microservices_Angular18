@@ -1,5 +1,5 @@
 # .NET8_Microservices_Angular18
-Creating NET8 Microservices_Clean Architectura and angular 18 - Ecommerce
+Creating NET8 Microservices Clean Architectura and angular 18 - Ecommerce
 
 1.- Create a solution (SharedLibrary). DemoECommerce.SharedSolution
 2.- Create Project eCommerce.SharedLibrary
@@ -51,12 +51,27 @@ Creating Product API
 	Add Nuget Dependencies:
 		For perform migrations. Microsoft.EntityFrameworkCore.Tools
 - ProductApi.Application
-	Add Project references.
-	eCommerce.SharedLibrary
-	Product.Api.Domain
+	Add Project dependencies:
+		eCommerce.SharedLibrary
+		Product.Api.Domain
+- ProductApi.Infrastructure-
+	Add Project References
+		ProductApi.Aplication
+- ProductApi.Presentation
+	Add Project references
+		ProductApi.Infrastructure
+-Rebuild solution
+- ProductApi.Domain
+	Add folder Entities
+	Entities add class Product.cs
+- ProductApi.Application
+	Add folder DTOs
+	Add class ProductDTO
+	DTOs.
+		Add  new folder -> Conversions
+		Add a product conversión -> Add class Product Conversions -> ProductConversion.cs.
 		
-
-
+	
 
 	
 	
