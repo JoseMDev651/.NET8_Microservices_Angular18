@@ -70,6 +70,16 @@ Creating Product API
 	DTOs.
 		Add  new folder -> Conversions
 		Add a product conversión -> Add class Product Conversions -> ProductConversion.cs.
+	Add folder interfaces
+	Add Interface IProduct : IGenericInterface<Product> -> Before created Shared library (eCommerce.SharedLibrary)
+- ProductApi.Infrastructure
+	- Creation of a Repo 
+	- Create folder Repositories.
+	- Add class ProductRepository.cs
+	- Implementar interface IProduct
+	- Inject generic DBContext (Created in shared Library)
+	- Create folder Data
+	- Create class ProductDbContext.cs
 		
 	
 
