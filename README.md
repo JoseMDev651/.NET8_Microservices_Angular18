@@ -88,6 +88,21 @@ Creating Product API
 			- Create Dependency Injection (DI)
 			- Register middleware such as:Global Exception: handles external errors.
 			- Listen to Only API Gateway: blocks all outsider calls.
+------------------------------------------------------------------
+- Presentation: Product.Api.Presentation 
+	- Launch settings
+		- http: aplicationUrl= http://localhost:5001
+	- app settings
+		- Connections strings
+		- Myserilog
+		- Authentication (port: 5000)
+	- Program.cs
+		- Services.AddInfrastructureService(builder.Configuration);
+		- app.UseInfrastructurePolicy();
+	- Controllers.
+		- Add Controller in blank.
+		- ProductController.cs
+		- Inject IProduct
 			
 		
 	
