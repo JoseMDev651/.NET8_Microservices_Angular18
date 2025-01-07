@@ -80,6 +80,15 @@ Creating Product API
 	- Inject generic DBContext (Created in shared Library)
 	- Create folder Data
 	- Create class ProductDbContext.cs
+	- Dependency Injection
+		- Add folder DependencyInjection
+		- Add class ServiceContainer
+			- Add database connectivity
+			- Add authentication schema
+			- Create Dependency Injection (DI)
+			- Register middleware such as:Global Exception: handles external errors.
+			- Listen to Only API Gateway: blocks all outsider calls.
+			
 		
 	
 
