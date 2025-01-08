@@ -89,7 +89,7 @@ Creating Product API
 			- Register middleware such as:Global Exception: handles external errors.
 			- Listen to Only API Gateway: blocks all outsider calls.
 ------------------------------------------------------------------
-- Presentation: Product.Api.Presentation 
+- Presentation: ProductApi.Presentation 
 	- Launch settings
 		- http: aplicationUrl= http://localhost:5001
 	- app settings
@@ -103,7 +103,16 @@ Creating Product API
 		- Add Controller in blank.
 		- ProductController.cs
 		- Inject IProduct
-			
+		- Create endpoints
+			- [HttpGet]
+				- Get all products from repo
+				- Convert data from entity to DTO
+			- [HttpGet("{id:int}")]
+				- Get single product from the Repo
+				- Convert from entity to DTO and return
+			- [HttpPost]
+				- Check model state is all data annotations are passed
+				- Convert to Entity
 		
 	
 
