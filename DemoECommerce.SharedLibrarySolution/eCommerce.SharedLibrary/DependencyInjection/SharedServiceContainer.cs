@@ -17,7 +17,7 @@ namespace eCommerce.SharedLibrary.DependencyInjection
             //Add Generic Database context
             services.AddDbContext<TContext>(option => option.UseSqlServer(
                 config
-                .GetConnectionString("eCommerceConection"), sqlserverOption =>
+                .GetConnectionString("eCommerceConnection"), sqlserverOption =>
                 sqlserverOption.EnableRetryOnFailure()));
 
             // Configure Serilog logging
@@ -43,7 +43,7 @@ namespace eCommerce.SharedLibrary.DependencyInjection
             app.UseMiddleware<GlobalException>();
 
             //Register Middleware to block all outsiders API calls
-            app.UseMiddleware<ListenToOnlyApiGateway>();
+            //app.UseMiddleware<ListenToOnlyApiGateway>();
             return app;
         }
     }

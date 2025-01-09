@@ -113,6 +113,21 @@ Creating Product API
 			- [HttpPost]
 				- Check model state is all data annotations are passed
 				- Convert to Entity
+			- [HttpPut]
+				- Check model state is all data annotations are passed
+				- Convert to Entity
+			- [HttpDelete]
+				- Convert to Entity
+	- Rebuild the Project
+-------------------------------------------------------
+- ProductApi.Infrastructure
+	- Access Database	
+	- Package Manager console -> ProductApi.Infrastructure
+		- add-migration First -o Data/Migrations
+		- update-database
+	- Set as initial Project ProductAPI.Presentation
+
+- Launch http -> Swagger -> Endpoints -> http://localhost:5001/swagger/index.html
 		
 	
 
