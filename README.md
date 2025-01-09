@@ -128,7 +128,8 @@ Creating Product API
 	- Set as initial Project ProductAPI.Presentation
 
 - Launch http -> Swagger -> Endpoints -> http://localhost:5001/swagger/index.html
-		
+-----------------------------------------------
+- Create other API for Microservice Project		
 	
 
 	

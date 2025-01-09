@@ -115,7 +115,7 @@ namespace ProductApi.Infrastructure.Repositories
             try
             {
                 var product = await FindByIdAsync(entity.Id);
-                if (product is not null)
+                if (product is null)
                     return new Response(false, $"{entity.Name} not found.");
 
                 context.Entry(product).State = EntityState.Detached;
