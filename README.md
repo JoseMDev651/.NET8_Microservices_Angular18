@@ -153,8 +153,18 @@ Creating Product API
 		- Microsoft.Extensions.DependencyInjection.Abstractions
 	- OrderAPI.Presentation packages:
 		- Microsoft.EntityFrameworkCore.Tools
+	- Rebuild solution.
 
-	
+- OpenApi.Domain
+	- Add new folder Entities
+	- Add class Order
+- OrderApi.Application
+	- Add new folder DTOs
+	- Create class OrderDTO.(record)
+	- Create class ProductDTO. (record)
+	- Create class AppUserDTO. (record)
+	- Create class OrderDetailsDTO. (recorsd)
+
 	
 	
 
