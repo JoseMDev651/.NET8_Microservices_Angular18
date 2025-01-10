@@ -129,8 +129,30 @@ Creating Product API
 
 - Launch http -> Swagger -> Endpoints -> http://localhost:5001/swagger/index.html
 -----------------------------------------------
-- Create other API for Microservice Project		
-	
+- Create other API (Order API) for Microservice Project
+	- Create a new solution	(blank)
+	- Add Project OOrderApi.Domai	
+	- Add Project OrderApi.Application
+	- Add Project OrderApi.Infrastructure
+	- Add Web API OrderApi.Presentation
+	- Rebuild solution
+	- Add Project eCommerce.SharedSolution to Order Api solution.
+	- OrderApi.Application dependencies:
+		- eCommerce.SharedLibrary
+		- OrderApi.Domain
+	- OrderApi.Infrastructure dependencies:
+		- OrderApi.Application	
+	- OrderApi.Presentation dependencies:
+		- OrderApi.Infrastructure
+	- OrderApi.Application Packages:
+		- Microsoft.Extensions.Http
+		- Polly.Core
+		- Polly.Extensions
+	- OrderApi.Infrastructure packages:
+		- Microsoft.Extensions.DependencyInjection
+		- Microsoft.Extensions.DependencyInjection.Abstractions
+	- OrderAPI.Presentation packages:
+		- Microsoft.EntityFrameworkCore.Tools
 
 	
 	
