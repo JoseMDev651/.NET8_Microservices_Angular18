@@ -163,7 +163,12 @@ Creating Product API
 	- Create class OrderDTO.(record)
 	- Create class ProductDTO. (record)
 	- Create class AppUserDTO. (record)
-	- Create class OrderDetailsDTO. (recorsd)
+	- Create class OrderDetailsDTO. (record)
+	- Add new folder Conversions (Automapper)
+	- Add class OrderConversion
+	- Add folder Interfaces
+	- Add new Interface (IOrder)
+	
 
 	
 	
