@@ -164,10 +164,15 @@ Creating Product API
 	- Create class ProductDTO. (record)
 	- Create class AppUserDTO. (record)
 	- Create class OrderDetailsDTO. (record)
-	- Add new folder Conversions (Automapper)
+	- Add new folder Conversions 
 	- Add class OrderConversion
 	- Add folder Interfaces
 	- Add new Interface (IOrder)
+	- Create new folder (Services) 
+	- Add Interface IOrderService.cs
+		- Inject our client
+	- Add class OrderService.cs
+		- Implement interface
 	
 
 	

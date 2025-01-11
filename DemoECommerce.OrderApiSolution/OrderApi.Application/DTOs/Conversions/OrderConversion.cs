@@ -3,7 +3,7 @@ namespace OrderApi.Application.DTOs.Conversions
 {
     public static class OrderConversion
     {
-        public static Order ToEntity(OrderDTO order) => new Order()
+        public static Order ToEntity(OrderDTO order) => new ()
         {
             Id = order.Id,
             ClientId = order.ClientId,
@@ -40,7 +40,7 @@ namespace OrderApi.Application.DTOs.Conversions
                 ));
 
                 return(null, _orders);
-            }
+            }            
         }
     }
 }
