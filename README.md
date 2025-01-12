@@ -182,7 +182,12 @@ Creating Product API
 	- Create folder Data
 	- Add class OrderDbContext
 	- Add DependecyInjection
-	- Add class DependencyInjection
+	- Add class ServiceContainer
+- OrderApi.Presentation
+	- Copy and adapt appsettings.json of the other solution.
+	- Program.cs add service Infrastructure.
+	- launchSettings.json -> http port 5002 -> Delete https
+	- Create Controller
 	
 
 	
