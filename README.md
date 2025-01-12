@@ -173,6 +173,16 @@ Creating Product API
 		- Inject our client
 	- Add class OrderService.cs
 		- Implement interface
+	- Add folder DependencyInjection
+	- Create static class ServiceContainer.
+- OrderApi.Infrastructure
+	- Create folder Repositories
+	- Create class OrderRepository
+	- Implement IOder interface
+	- Create folder Data
+	- Add class OrderDbContext
+	- Add DependecyInjection
+	- Add class DependencyInjection
 	
 
 	
