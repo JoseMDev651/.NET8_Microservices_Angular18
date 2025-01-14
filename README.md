@@ -188,12 +188,15 @@ Creating Product API
 	- Program.cs add service Infrastructure.
 	- launchSettings.json -> http port 5002 -> Delete https
 	- Create Controller
-	- Create endpoints:
+	- Create endpoints (Order Conversion):
 		- GetOrders() [HttpGet]
 		- CreateOrder(OrderDTO orderDTO) [HttpPost]
 		- Get one order - GetOrder(int id) [HttpGet("{id:int]")]
 		- Update [HttpPut]
 		- Delete [HttpDelete]
+		- GetClientOrdersAsync [Http("client/{clientId;int}")]
+		- GetClientOrders[HttpGet("client/{clientId:int}")]
+		- GetOrderDetails [HttpGet("details/{orderId:int}")]
 	
 
 	

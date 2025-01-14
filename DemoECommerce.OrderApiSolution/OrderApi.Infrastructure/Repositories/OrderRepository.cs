@@ -133,7 +133,7 @@ namespace OrderApi.Infrastructure.Repositories
             catch (Exception ex)
             {
                 // Log original Exception
-                LogException.LogExceptions(ex);entity}
+                LogException.LogExceptions(ex);
 
                 // Display scary-free message to client
                 return new Response(false, "Error occured while updating order");
