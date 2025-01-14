@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using eCommerce.SharedLibrary.Responses;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OrderApi.Application.DTOs;
+using OrderApi.Application.DTOs.Conversions;
 using OrderApi.Application.Interfaces;
 using OrderApi.Application.Services;
 
@@ -11,6 +13,64 @@ namespace OrderApi.Presentation.Controllers
     public class OrdersController(IOrder orderInterface, IOrderService orderService) : ControllerBase
     {
         [HttpGet]
-        public async Task<IActionResult<IEnumerable<OrderDTO>>> GetOrders()
-    }
+        public async Task<ActionResult<IEnumerable<OrderDTO>>> GetOrders()
+        {
+            var orders = await orderInterface.GetAllAsync();
+            if (!orders.Any())
+                return NotFound("No order detected in the database.");
+
+            var (_, list) = OrderConversion.FromEntity(null, orders);
+            return !list!.Any() ? NotFound() : Ok(list);
+        }
+
+        [HttpGet("client/{clientId:int}")]
+        public async Task<ActionResult<OrderDTO>> GetClientOrders(int clientId)
+        {
+            if (clientId <= 0) return BadRequest("Invalid data provided");
+        }
+
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<OrderDTO>> GetOrder(int id)
+        {
+            var order = await orderInterface.FindByIdAsync(id);
+            if (order is null)
+                return NotFound(null);
+
+            var (_order, _) = OrderConversion.FromEntity(order, null);
+            return Ok(order);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Response>> CreateOrder(OrderDTO orderDTO)
+        {
+            //Check model state if all data annotations are passed
+            if (!ModelState.IsValid)
+                return BadRequest("Incomplpete data submitted");
+
+            //Convert to entity
+            var getEntity = OrderConversion.ToEntity(orderDTO);
+            var response = await orderInterface.CreateAsync(getEntity);
+            return response.Flag ? Ok(response) : BadRequest(response);
+        }
+
+        [HttpPut]
+        public async Task<ActionResult<Response>> UpdateOrder(OrderDTO orderDTO)
+        {
+            //Convert from DTO to entity
+            var order = OrderConversion.ToEntity(orderDTO);
+            var response = await orderInterface.UpdateAsync(order);
+            return response.Flag ? Ok(response) : BadRequest(response);
+        }
+
+        [HttpDelete]
+        public async Task<ActionResult<Response>> DeleteOrder(OrderDTO orderDTO)
+        {
+            //Convert from DTO to Entity
+            var order = OrderConversion.ToEntity(orderDTO);
+            var response = await orderInterface.DeleteAsync(order);
+            return response.Flag ? Ok(response) : BadRequest(response);
+        }
+
+
+    } 
 }
